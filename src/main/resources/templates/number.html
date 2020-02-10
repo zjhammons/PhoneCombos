@@ -1,18 +1,18 @@
 <!DOCTYPE HTML>
 <html xmlns:th="https://www.thymeleaf.org">
 <head>
-    <title>Phone Number Submission</title>
+    <title>Phone Number Submission Form</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link href="/css/number.css" rel="stylesheet">
-
+    <script src="/js/number.js"></script>
 </head>
 <body>
-<h1>Alpha-numeric Phone Number Combinations</h1>
-
-<form action="#" th:action="@{/number}" th:object="${number}" method="post">
-    <p id="format"><b>PHONE NUMBER FORMAT: 123-456-7890</b></p>
-    <p>Phone Number: <input type="text" th:field="*{phoneNumber}" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required/></p>
-    <p><input id="submit" type="submit" value="Submit" /> <input id="reset" type="reset" value="Reset" /></p>
-</form>
+    <h1>Alpha-numeric Phone Number Combinations</h1>
+    <form action="#" th:action="@{/number}" th:object="${number}" method="post">
+        <p id="format"><b>FORMAT: 10-DIGIT->4432567890 7-DIGIT->2567890</b></p>
+        <p>Phone Number: <input id="number" type="text" th:field="*{phoneNumber}" oninput="validate()"  required/></p>
+        <p id="error" hidden><b>X</b> Please enter a 7 or 10 digit number in the required format.</p>
+        <p><input id="submit" type="submit" value="Submit" /> <input id="reset" type="reset" value="Reset" /></p>
+    </form>
 </body>
 </html>

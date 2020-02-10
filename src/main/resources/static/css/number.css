@@ -1,7 +1,3 @@
-body{
-    background-color: DarkGrey;
-}
-
 h1{
     text-align: center;
     text-decoration: underline;
@@ -11,20 +7,16 @@ form{
     text-align: center;
 }
 
-#format{
-
-}
-
 #submit{
-    background-color:Green;
-    color:White;
-    font-size:18px;
-    border-color:Green;
+    background-color: Green;
+    color: White;
+    font-size: 18px;
+    border-color: Green;
 }
 
 #reset{
-    background-color:Red;
-    color:White;
-    font-size:18px;
-    border-color:Red;
+    background-color: Red;
+    color: White;
+    font-size: 18px;
+    border-color: Red;
 }

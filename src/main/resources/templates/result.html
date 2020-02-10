@@ -1,14 +1,31 @@
 <!DOCTYPE HTML>
 <html xmlns:th="https://www.thymeleaf.org">
 <head>
-    <title>Alpha-numeric Phone Combos</title>
+    <title>Alpha-numeric Phone Combinations Results</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link href="/css/result.css" rel="stylesheet">
-
 </head>
-<h1>Alpha-numeric Phone Number Combinations</h1>
 <body>
-<p th:text="'Here are all possible alpha-numeric combinations for ' + ${number.phoneNumber}"></p>
-<a href="/number">Submit another phone number</a>
+<div class="grid-container">
+    <div class="item1">
+        <h1>Alpha-numeric Phone Number Combinations</h1>
+    </div>
+    <div class="item5">
+        <a href="/number">Submit another phone number</a>
+    </div>
+    <div class="item3">
+        <p th:text="'Here are all possible alpha-numeric combinations for: ' + ${number.phoneNumber}"></p>
+    </div>
+    <div class="item4">
+        <p th:text="'Count: ' + ${count}"></p>
+    </div>
+    <div class="item2">
+        <table>
+            <tr th:each="result : ${result}">
+                <td th:text="${result}"></td>
+            </tr>
+        </table>
+    </div>
+</div>
 </body>
 </html>
